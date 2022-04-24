@@ -2,7 +2,7 @@
   <div class="seasons">
     <div class="season" *ngFor="let season of seasons; let index = index" (click)="showEpisodes(index+1)">
       <p>Sezon {{index + 1}}</p>
-      <p>Liczba odcinków: {{season}}</p>
+      <p>Liczba odcinków: {{season.numberOfEpisodes}}</p>
     </div>
   </div>
 

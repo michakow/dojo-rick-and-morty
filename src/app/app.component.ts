@@ -10,7 +10,7 @@ import { Season } from './interfaces/season';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  seasons: number[] = [];
+  seasons: Season[] = [];
   episodes: Episode[] = [];
   characters: Character[] = [];
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchApiService.getSeasons().subscribe(res => {
-      this.seasons = Object.values(res)
+      this.seasons = res
     });
   }
 

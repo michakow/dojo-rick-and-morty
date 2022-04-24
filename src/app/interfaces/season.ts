@@ -1,4 +1,6 @@
+import { Episode } from "./episode";
+
 export interface Season {
-  id: number;
-  episodes: number;
+  numberOfEpisodes: number;
+  episodes: Episode[];
 }
