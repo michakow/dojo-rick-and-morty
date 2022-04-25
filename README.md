@@ -11,8 +11,8 @@ Provides information about seasons of the Rick and Morty series along with list 
 
 ## Backend
 
-API: https://rickandmorty864.herokuapp.com/\
-Repo: https://github.com/MarDom92/rickandmorty\
+API: https://rickandmorty864.herokuapp.com/ \
+Repo: https://github.com/MarDom92/rickandmorty \
 Author: [MarDom92](https://github.com/MarDom92)
 
 ## Development server
