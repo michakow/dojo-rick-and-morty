@@ -1,3 +1,4 @@
+<app-loader *ngIf="!seasons.length || showEpisodesLoader"></app-loader>
 <div class="container">
   <div class="seasons">
     <div class="season" *ngFor="let season of seasons; let index = index" (click)="showEpisodes(index+1)">

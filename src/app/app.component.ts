@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   seasons: Season[] = [];
   episodes: Episode[] = [];
   characters: Character[] = [];
+  showEpisodesLoader: boolean = false;
 
   constructor(private fetchApiService: FetchApiService) {}
 
@@ -23,8 +24,11 @@ export class AppComponent implements OnInit {
   }
 
   showEpisodes(season: number) {
+    this.episodes = [];
+    this.showEpisodesLoader = true;
     this.fetchApiService.getEpisodes(season).subscribe((res) => {
-      this.episodes = res.episodes
+      this.episodes = res.episodes;
+      this.showEpisodesLoader = false;
     });
   }
 }
