@@ -9,8 +9,18 @@
 
   <div class="episodes" *ngIf="episodes.length">
     <div class="episode" *ngFor="let episode of episodes">
-      <p>{{episode.name}}</p>
+      <p (click)="showEpisodeCharacters(episode)">{{episode.name}}</p>
       <p>{{episode.air_date}}</p>
+    </div>
+  </div>
+
+  <div *ngIf="characters.length" class="characters">
+    <p>W odcinku "{{selectedEpisodeName}}" pojawili się</p>
+    <div class="characters-table" >
+      <div class="character" *ngFor="let character of characters">
+        <img [src]="character.image" alt="">
+        <p>{{character.name}}</p>
+      </div>
     </div>
   </div>
 </div>

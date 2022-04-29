@@ -45,5 +45,45 @@
 
   & > p {
     flex-basis: content;
+    transition: 0.2s;
+
+    &:first-of-type {
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
+.characters {
+  margin: 20px auto 0;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  color: wheat;
+
+  & > p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
+.characters-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.character {
+  text-align: center;
+
+  & > img {
+    width: 150px;
   }
 }
